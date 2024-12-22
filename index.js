@@ -1,8 +1,9 @@
 const express = require("express");
-
 const routes = require("./routes/client/index.route");
+require("dotenv").config();
+
 const app = express();
-const port = 8080;
+const port = process.env.PORT;
 
 app.set("views", "./views");
 app.set("view engine", "pug");
