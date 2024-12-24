@@ -7,7 +7,7 @@ module.exports.product = async (req, res) => {
         item.newPrice = (item.price * (100 - item.discountPercentage) / 100).toFixed(2);
     });
 
-    res.render("client/page/products/index.pug", {
+    res.render("client/pages/products/index.pug", {
         pageTitle: "Trang danh sach san pham",
         products: product,
     });

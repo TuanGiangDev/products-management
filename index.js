@@ -1,5 +1,6 @@
 const express = require("express");
-const routes = require("./routes/client/index.route");
+const route = require("./routes/client/index.route");
+const routeAdmin = require("./routes/admin/index.route");
 
 const database = require("./configs/database");
 
@@ -16,7 +17,8 @@ app.set("view engine", "pug");
 app.use(express.static('public'));
 
 //Routes
-routes(app);
+route(app);
+routeAdmin(app);
 
 app.listen(port, () => {
     console.log(`App listening on port ${port}`);
